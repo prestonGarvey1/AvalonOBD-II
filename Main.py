@@ -22,4 +22,5 @@ def print_to_screen(text):
 #Use OBD
 connection = obd.OBD(portstr="/dev/rfcomm0")
 
+connection.query(obd.commands.RPM)
 print_to_screen(obd.commands.RPM)
